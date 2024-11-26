@@ -20,7 +20,9 @@ export const SignInScreen = ({ onScreen }: ISignInScreenProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    return null;
+  };
 
   return (
     <Card className="h-full w-full p-8">
@@ -50,7 +52,13 @@ export const SignInScreen = ({ onScreen }: ISignInScreenProps) => {
             required
           />
 
-          <Button type="submit" className="w-full" size="lg" disabled={false}>
+          <Button
+            type="submit"
+            className="w-full"
+            size="lg"
+            disabled={false}
+            onClick={onSubmit}
+          >
             Submit
           </Button>
         </form>
@@ -79,7 +87,7 @@ export const SignInScreen = ({ onScreen }: ISignInScreenProps) => {
           Don&apos;t have an account ?
           <span
             className="hover:underline text-blue-600 font-semibold pl-1 cursor-pointer"
-            onClick={() => onScreen('signUp')}
+            onClick={() => onScreen("signUp")}
           >
             Sign Up
           </span>

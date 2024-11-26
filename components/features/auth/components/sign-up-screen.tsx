@@ -21,7 +21,9 @@ export const SignUpScreen = ({ onScreen }: ISignUpScreenProps) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    return null;
+  };
 
   return (
     <Card className="h-full w-full p-8">
@@ -60,7 +62,13 @@ export const SignUpScreen = ({ onScreen }: ISignUpScreenProps) => {
             required
           />
 
-          <Button type="submit" className="w-full" size="lg" disabled={false}>
+          <Button
+            type="submit"
+            className="w-full"
+            size="lg"
+            disabled={false}
+            onClick={onSubmit}
+          >
             Submit
           </Button>
         </form>
